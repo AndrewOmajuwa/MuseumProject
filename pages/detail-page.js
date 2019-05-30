@@ -15,11 +15,14 @@ function submitComment () {
     comment.classList.add('comment');
     comment.appendChild(h3);
     comment.appendChild(p);
-    //diplaying the comments
-    const commentSection = document.getElementById('comments')
-    commentSection.appendChild(comment)
-    //Reassigning input and textArea values
-    inputField.value = null
-    textArea.value = null
-} 
-
+    //diplaying the comments;
+    const commentSection = document.getElementById('comments');
+    commentSection.appendChild(comment);
+    //Reassigning input and textArea values;
+    inputField.value = null;
+    textArea.value = null;
+    if(!name || !msg){
+        alert('You did not put in a name or message')
+        return null
+    }  
+}
