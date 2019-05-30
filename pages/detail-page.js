@@ -1,3 +1,17 @@
+//function to validate form 
+function validatingAnswers(name, msg){
+  if(!name || !msg){
+    alert('Please insert a name and comment');
+    return true
+  }
+  else if (msg.length > 280){
+    alert('Comment too long, Max. 280 characters');
+    return true 
+  }
+  else{
+    return submitComment()}
+}
+
 // add event handler
 function submitComment() {
     // gather data
@@ -25,4 +39,9 @@ function submitComment() {
     // reseting form values
     inputField.value = null
     textArea.value = null
+
+//Checking user Answers
+    if(validatingAnswers(name, msg)){
+      return null
+    }
   }
